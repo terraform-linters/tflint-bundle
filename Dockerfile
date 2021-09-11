@@ -1,9 +1,9 @@
 FROM alpine:3.14 as builder
 
-ARG TFLINT_VERSION=0.31.0
-ARG AWS_VERSION=0.6.0
-ARG AZURERM_VERSION=0.12.0
-ARG GOOGLE_VERSION=0.11.0
+ARG TFLINT_VERSION=0.32.0
+ARG AWS_VERSION=0.7.1
+ARG AZURERM_VERSION=0.13.0
+ARG GOOGLE_VERSION=0.12.0
 
 RUN wget -O /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/v"${TFLINT_VERSION}"/tflint_linux_amd64.zip \
   && unzip /tmp/tflint.zip -d /usr/local/bin \
