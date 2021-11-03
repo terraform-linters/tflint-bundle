@@ -32,5 +32,7 @@ RUN apk add --no-cache ca-certificates
 COPY --from=builder /usr/local/bin/tflint /usr/local/bin
 COPY --from=builder /root/.tflint.d /root/.tflint.d
 
+RUN tflint --init
+
 ENTRYPOINT ["tflint"]
 WORKDIR /data
