@@ -8,7 +8,7 @@ docker pull ghcr.io/terraform-linters/tflint-bundle
 
 Bundled versions:
 
-- TFLint v0.37.0
+- TFLint v0.38.1
 - tflint-ruleset-aws v0.14.0
 - tflint-ruleset-azurerm v0.17.0
 - tflint-ruleset-google v0.18.0
