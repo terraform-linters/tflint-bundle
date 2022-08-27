@@ -1,4 +1,4 @@
-FROM alpine:3.16.1 as builder
+FROM alpine:3.16.2 as builder
 
 ARG TFLINT_VERSION=0.39.3
 ARG AWS_VERSION=0.16.0
@@ -23,7 +23,7 @@ RUN wget -O /tmp/tflint-ruleset-google.zip https://github.com/terraform-linters/
   && unzip /tmp/tflint-ruleset-google.zip -d ~/.tflint.d/plugins \
   && rm /tmp/tflint-ruleset-google.zip
 
-FROM alpine:3.16.1
+FROM alpine:3.16.2
 
 LABEL maintainer=terraform-linters
 
