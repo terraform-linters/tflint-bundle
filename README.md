@@ -10,7 +10,7 @@ Bundled versions:
 
 - TFLint v0.42.2
 - tflint-ruleset-aws v0.18.0
-- tflint-ruleset-azurerm v0.18.0
+- tflint-ruleset-azurerm v0.19.0
 - tflint-ruleset-google v0.20.0
 
 These ruleset plugins are installed manually. If you want to enable it, just set `enabled = true` without specifying the version.

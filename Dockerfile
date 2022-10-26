@@ -4,7 +4,7 @@ ARG TARGETOS TARGETARCH
 
 ARG TFLINT_VERSION=0.42.2
 ARG AWS_VERSION=0.18.0
-ARG AZURERM_VERSION=0.18.0
+ARG AZURERM_VERSION=0.19.0
 ARG GOOGLE_VERSION=0.20.0
 
 RUN wget -O /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/v"${TFLINT_VERSION}"/tflint_"${TARGETOS}"_"${TARGETARCH}".zip \
