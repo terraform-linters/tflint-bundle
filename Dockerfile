@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM alpine:3.16.2 as builder
+FROM --platform=$BUILDPLATFORM alpine:3.16.3 as builder
 
 ARG TARGETOS TARGETARCH
 
@@ -25,7 +25,7 @@ RUN wget -O /tmp/tflint-ruleset-google.zip https://github.com/terraform-linters/
   && unzip /tmp/tflint-ruleset-google.zip -d ~/.tflint.d/plugins \
   && rm /tmp/tflint-ruleset-google.zip
 
-FROM alpine:3.16.2
+FROM alpine:3.16.3
 
 LABEL maintainer=terraform-linters
 
