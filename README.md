@@ -8,9 +8,9 @@ docker pull ghcr.io/terraform-linters/tflint-bundle
 
 Bundled versions:
 
-- TFLint v0.44.1
+- TFLint v0.45.0
 - tflint-ruleset-aws v0.21.2
-- tflint-ruleset-azurerm v0.20.0
+- tflint-ruleset-azurerm v0.21.0
 - tflint-ruleset-google v0.22.2
 
 These ruleset plugins are installed manually. If you want to enable it, just set `enabled = true` without specifying the version.
