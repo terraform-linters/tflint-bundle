@@ -1,5 +1,7 @@
 # tflint-bundle
 
+**DEPRECATED: This project is deprecated. We strongly recommend migrating to plugin management with `.tflint.hcl` and Renovate.**
+
 A Docker image with TFLint and ruleset plugins
 
 ```console
