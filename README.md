@@ -1,11 +1,13 @@
 # tflint-bundle
 
-**DEPRECATED: This project is deprecated. We strongly recommend migrating to plugin management with `.tflint.hcl` and Renovate.**
+~~**DEPRECATED: This project is deprecated. We strongly recommend migrating to plugin management with `.tflint.hcl` and Renovate.**~~
+
+Forked from the original.
 
 A Docker image with TFLint and ruleset plugins
 
 ```console
-docker pull ghcr.io/terraform-linters/tflint-bundle
+docker pull ghcr.io/dalaran/tflint-bundle
 ```
 
 Bundled versions:

@@ -1,11 +1,11 @@
-FROM --platform=$BUILDPLATFORM alpine:3.18.3 as builder
+FROM --platform=$BUILDPLATFORM alpine:3.18 as builder
 
 ARG TARGETOS TARGETARCH
 
-ARG TFLINT_VERSION=0.48.0
-ARG AWS_VERSION=0.26.0
-ARG AZURERM_VERSION=0.24.0
-ARG GOOGLE_VERSION=0.24.0
+ARG TFLINT_VERSION
+ARG AWS_VERSION
+ARG AZURERM_VERSION
+ARG GOOGLE_VERSION
 
 RUN wget -O /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/v"${TFLINT_VERSION}"/tflint_"${TARGETOS}"_"${TARGETARCH}".zip \
   && unzip /tmp/tflint.zip -d /usr/local/bin \
