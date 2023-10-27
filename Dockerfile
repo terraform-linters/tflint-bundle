@@ -29,10 +29,20 @@ FROM alpine:3.18.3
 
 LABEL maintainer=terraform-linters
 
-RUN apk add --no-cache ca-certificates
+ARG USER=tflint
+ARG USER_ID=10001
+ARG GROUP=tflint
+ARG GROUP_ID=10001
+
+RUN addgroup -g ${GROUP_ID} ${GROUP} && \
+    adduser -h /home/${USER} -u ${USER_ID} -G ${GROUP} -D ${USER}
+
+RUN apk add --no-cache ca-certificates && update-ca-certificates
 
 COPY --from=builder /usr/local/bin/tflint /usr/local/bin
-COPY --from=builder /root/.tflint.d /root/.tflint.d
+COPY --from=builder --chown=${USER}:${GROUP} /root/.tflint.d /home/${USER}/.tflint.d
+
+USER ${USER}
+WORKDIR /data
 
 ENTRYPOINT ["tflint"]
-WORKDIR /data
